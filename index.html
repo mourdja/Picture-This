@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Picture This!</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="title">
+      <h1>Picture This!</h1>
+      <h4>My Really Cool Blog Post</h4>
+    </div>
+
+    <!-- I use picture to show different image shapes
+         depending on the screen width. -->
+    <picture>
+
+      <!-- On large screens, I display a square image
+           The browser chooses the best resolution. -->
+      <source
+        media="(min-width: 960px)"
+        sizes="50vw"
+        srcset="
+          images/museum-square-480.jpg 480w,
+          images/museum-square-640.jpg 640w,
+          images/museum-square-800.jpg 800w,
+          images/museum-square-960.jpg 960w,
+          images/museum-square-1280.jpg 1280w,
+          images/museum-square-1440.jpg 1440w,
+          images/museum-square-1600.jpg 1600w,
+          images/museum-square-1920.jpg 1920w,
+          images/museum-square-2400.jpg 2400w">
+
+      <!-- On smaller screens, I use landscape images.
+           The image fills the available screen width. -->
+      <img
+        src="images/museum.jpg"
+        srcset="
+          images/museum-landscape-320.jpg 320w,
+          images/museum-landscape-480.jpg 480w,
+          images/museum-landscape-640.jpg 640w,
+          images/museum-landscape-720.jpg 720w,
+          images/museum-landscape-960.jpg 960w,
+          images/museum-landscape-1440.jpg 1440w,
+          images/museum-landscape-1920.jpg 1920w,
+          images/museum-landscape-2160.jpg 2160w"
+        sizes="100vw"
+        alt="Museum interior">
+    </picture>
+
+  </header>
+</body>
+
+</html>
