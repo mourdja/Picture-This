@@ -17,42 +17,45 @@
       <h4>My Really Cool Blog Post</h4>
     </div>
 
-    <!-- I use picture to show different image shapes
-         depending on the screen width. -->
-    <picture>
+   
+<!-- I use picture to display different image formats
+     depending on the screen size. -->
+<picture>
 
-      <!-- On large screens, I display a square image
-           The browser chooses the best resolution. -->
-      <source
-        media="(min-width: 960px)"
-        sizes="50vw"
-        srcset="
-          images/museum-square-480.jpg 480w,
-          images/museum-square-640.jpg 640w,
-          images/museum-square-800.jpg 800w,
-          images/museum-square-960.jpg 960w,
-          images/museum-square-1280.jpg 1280w,
-          images/museum-square-1440.jpg 1440w,
-          images/museum-square-1600.jpg 1600w,
-          images/museum-square-1920.jpg 1920w,
-          images/museum-square-2400.jpg 2400w">
+  <!-- Square images for screens 960px and wider.
+       They take half of the viewport width. -->
+  <source
+    media="(min-width: 960px)"
+    sizes="50vw"
+    srcset="
+      Photo/museum.jpg-derivatives/museum-480x480.jpg 480w,
+      Photo/museum.jpg-derivatives/museum-640x640.jpg 640w,
+      Photo/museum.jpg-derivatives/museum-800x800.jpg 800w,
+      Photo/museum.jpg-derivatives/museum-960x960.jpg 960w,
+      Photo/museum.jpg-derivatives/museum-1280x1280.jpg 1280w,
+      Photo/museum.jpg-derivatives/museum-1440x1440.jpg 1440w,
+      Photo/museum.jpg-derivatives/museum-1600x1600.jpg 1600w,
+      Photo/museum.jpg-derivatives/museum-1920x1920.jpg 1920w,
+      Photo/museum.jpg-derivatives/museum-2400x2400.jpg 2400w">
 
-      <!-- On smaller screens, I use landscape images.
-           The image fills the available screen width. -->
-      <img
-        src="images/museum.jpg"
-        srcset="
-          images/museum-landscape-320.jpg 320w,
-          images/museum-landscape-480.jpg 480w,
-          images/museum-landscape-640.jpg 640w,
-          images/museum-landscape-720.jpg 720w,
-          images/museum-landscape-960.jpg 960w,
-          images/museum-landscape-1440.jpg 1440w,
-          images/museum-landscape-1920.jpg 1920w,
-          images/museum-landscape-2160.jpg 2160w"
-        sizes="100vw"
-        alt="Museum interior">
-    </picture>
+  <!-- Landscape images for smaller screens.
+       The browser selects the appropriate resolution. -->
+  <img
+    src="Photo/museum.jpg-derivatives/museum-720x405.jpg"
+    srcset="
+      Photo/museum.jpg-derivatives/museum-320x180.jpg 320w,
+      Photo/museum.jpg-derivatives/museum-480x270.jpg 480w,
+      Photo/museum.jpg-derivatives/museum-640x360.jpg 640w,
+      Photo/museum.jpg-derivatives/museum-720x405.jpg 720w,
+      Photo/museum.jpg-derivatives/museum-960x540.jpg 960w,
+      Photo/museum.jpg-derivatives/museum-1440x810.jpg 1440w,
+      Photo/museum.jpg-derivatives/museum-1920x1080.jpg 1920w,
+      Photo/museum.jpg-derivatives/museum-2160x1215.jpg 2160w"
+    sizes="100vw"
+    alt="Museum gallery with paintings and seating">
+
+</picture>
+
 
   </header>
 </body>
