@@ -18,12 +18,48 @@
     </div>
 
    
-<!-- I use picture to display different image formats
-     depending on the screen size. -->
-<
-<img
-  src="https://mourdja.github.io/Picture-This/Photo/museum.jpg-derivatives/museum-480x480.jpg"
-  alt="Museum interior">
+
+<!-- I use picture to change the image shape
+     depending on the screen size.
+     AI helped me understand srcset and sizes
+     and how to use them for responsive images. -->
+
+<picture>
+
+  <!-- Square images are used from 960px
+       They take half of the screen width. -->
+  <source
+    media="(min-width: 960px)"
+    sizes="50vw"
+    srcset="
+      Photo/museum.jpg-derivatives/museum-480x480.jpg 480w,
+      Photo/museum.jpg-derivatives/museum-640x640.jpg 640w,
+      Photo/museum.jpg-derivatives/museum-800x800.jpg 800w,
+      Photo/museum.jpg-derivatives/museum-960x960.jpg 960w,
+      Photo/museum.jpg-derivatives/museum-1280x1280.jpg 1280w,
+      Photo/museum.jpg-derivatives/museum-1440x1440.jpg 1440w,
+      Photo/museum.jpg-derivatives/museum-1600x1600.jpg 1600w,
+      Photo/museum.jpg-derivatives/museum-1920x1920.jpg 1920w,
+      Photo/museum.jpg-derivatives/museum-2400x2400.jpg 2400w">
+
+  <!-- Landscape images are used below 960px.
+       The browser chooses the best resolution. -->
+  <img
+    src="Photo/museum.jpg-derivatives/museum-720x405.jpg"
+    srcset="
+      Photo/museum.jpg-derivatives/museum-320x180.jpg 320w,
+      Photo/museum.jpg-derivatives/museum-480x270.jpg 480w,
+      Photo/museum.jpg-derivatives/museum-640x360.jpg 640w,
+      Photo/museum.jpg-derivatives/museum-720x405.jpg 720w,
+      Photo/museum.jpg-derivatives/museum-960x540.jpg 960w,
+      Photo/museum.jpg-derivatives/museum-1440x810.jpg 1440w,
+      Photo/museum.jpg-derivatives/museum-1920x1080.jpg 1920w,
+      Photo/museum.jpg-derivatives/museum-2160x1215.jpg 2160w"
+    sizes="100vw"
+    alt="Museum gallery with paintings and seating">
+
+</picture>
+
 
   </header>
 </body>
