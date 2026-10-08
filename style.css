@@ -30,7 +30,10 @@ h4 {
   font-weight: 300;
 }
 
-/* I make the picture fill the available grid space. */
+/* I used ChatGPT (AI) to help me understand responsive
+   design and media queries, and to fix image sizing
+   and layout issues for different screen sizes. */
+   
 picture {
   display: block;
   width: 100%;
